@@ -1,0 +1,22 @@
+# node libraries
+node_modules
+
+# logs
+err.log
+out.log
+
+# temp file
+output.log
+table.html
+output.json
+
+# personal cert file
+certs
+
+# Upload user file
+uploads
+
+# IDE files
+.DS_Store
+CertDashboard.iml
+JiraTable.iml

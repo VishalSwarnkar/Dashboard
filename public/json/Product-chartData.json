@@ -1,0 +1,73 @@
+{
+  "cols": [
+    {
+      "label": "Product",
+      "type": "string"
+    },
+    {
+      "label": "Low",
+      "type": "number"
+    },
+    {
+      "role": "annotation",
+      "type": "string"
+    },
+    {
+      "label": "Unknown",
+      "type": "number"
+    },
+    {
+      "role": "annotation",
+      "type": "string"
+    },
+    {
+      "label": "normal",
+      "type": "number"
+    },
+    {
+      "role": "annotation",
+      "type": "string"
+    },
+    {
+      "label": "Medium",
+      "type": "number"
+    },
+    {
+      "role": "annotation",
+      "type": "string"
+    }
+  ],
+  "rows": [
+    {
+      "c": [
+        {
+          "v": "IPLAYERTVV1"
+        },
+        {
+          "v": 2
+        },
+        {
+          "v": 2
+        },
+        {
+          "v": 1
+        },
+        {
+          "v": 1
+        },
+        {
+          "v": 1
+        },
+        {
+          "v": 1
+        },
+        {
+          "v": 1
+        },
+        {
+          "v": 1
+        }
+      ]
+    }
+  ]
+}

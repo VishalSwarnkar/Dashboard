@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title><%=title%></title>
+    <script type="text/javascript" src="//www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascript/generateCharts.js"></script>
+    <script src="/javascript/generateTable.js"></script>
+    <script type="text/javascript">
+
+    google.charts.setOnLoadCallback(function() {
+      <%
+      chartType.forEach(type=>{
+        %>
+          getChartData(function (<%=type%>_result) {
+              drawChart(<%=type%>_result, '<%=type%>Chart', '3 Months Defect Data as per <%=type%>');
+          }, "<%=type%>");
+        <%
+      });
+      %>
+      });
+    </script>
+  </head>
+  <body>
+ <table class="columns" style="position: absolute; top:20%">
+   <tr>
+     <%
+     chartType.forEach(type=>{
+     %>
+     <td><div id="<%=type%>Chart" style="border: 1px solid #ccc"></div></td>
+     <%
+      });
+     %>
+   </tr>
+</table>
+</body>
+</html>

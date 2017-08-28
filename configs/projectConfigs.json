@@ -1,0 +1,12 @@
+{
+    "Project": ["IPLAYERTVV1"],
+    "JiraHostUrl": "you jira api url",
+    "JQLQuery": "jql=project in (IPLAYERTVV1) AND issuetype='Bug' AND created >= -12w &maxResults=5",
+    "ColHeader": ["Created", "JiraTicket", "Summary", "Priority", "Labels"],
+    "bannerData":["Note:", "Nothing"],
+    "cacheTime" : "",
+    "chartType" : ["Product","Date"],
+    "cert_path" : "public/javascript/certs/certificate.pem",
+    "cert_user" : "you user name",
+    "cert_pass" : "your cert password"
+}

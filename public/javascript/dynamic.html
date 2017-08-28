@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+            /** Style for the body **/
+        body {
+            font: 12px Tahoma, Arial, Helvetica, Sans-Serif;
+        }
+            /** Style for the Selectd Row **/
+        .myClass {
+            background-color:lightgreen;
+        }
+            /** Style for the table **/
+        #myTable {
+            border-collapse:collapse;
+            font-size: 0.917em;
+            width:400px;
+            min-width:200px;
+            margin-top:10px;
+        }
+        #myTable td {
+            border:1px solid #333;
+            padding:6px;
+            vertical-align:middle;
+            /** disable text selection **/
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+        #myTable tr {
+            cursor:pointer;
+        }
+        #myButton {
+            padding: .2em 1em;
+            font-size: 1em;
+            margin-bottom:20px;
+            margin-top:10px;
+        }
+        hr {
+            margin-bottom:30px;
+        }
+        h1 {
+            color:#336699;
+        }
+    </style>
+    <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            // Bind the click event, to the Add button
+            $("#myButton").click(function () {
+
+                // Create elements dynamically
+                var newRow = '<tr><td>This is a dynamically added row.</td></tr>';
+
+                // Add the new dynamic row after the last row
+                $('#myTable tr:last').after(newRow);
+            });
+
+            // Bind the click event, to the table rows
+            // New way (jQuery 1.7+) - .on(events, selector, handler)
+            $('#myTable').on('click', 'tr', function (event) {
+
+                // Add or Remove the class on clicking the table row
+                $(this).toggleClass('myClass');
+            });
+        });
+
+    </script>
+</head>
+<body>
+<h1>Bind Events to Dynamically Created Elements</h1>
+
+<hr/>
+<span><b>Version 2:</b> Click on the button.</span>
+
+<br/>
+<button id="myButton">Add New Row</button>
+<br/>
+<span><b>Click on the table rows.</b> Now it works for both the static & the dynamically added rows.</span>
+
+<br/>
+<table id="myTable">
+    <tr>
+        <td>This is a static row.</td>
+    </tr>
+</table>
+
+<div align="center" id="img">Loading...</div>
+</body>
+</html>

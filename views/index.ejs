@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title><%=title%></title>
+
+
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- DataTables CSS -->
+    <link href="/css/dataTables.bootstrap.css" rel="stylesheet"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- export button css -->
+
+    <link href="https://cdn.datatables.net/buttons/1.1.2/css/buttons.dataTables.min.css" rel="stylesheet"/>
+    <link href="/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+
+
+    <style>
+        .fail{
+            color: darkred;
+        }
+
+        .pass{
+            color: darkgreen;
+        }
+
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            padding: 6px 0;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.428571429;
+        }
+
+        .row{
+            margin-right: -10px;
+            margin-left: -10px;
+            margin-top: -18px;
+        }
+
+        .alert{
+            padding: 5px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+<div id="wrapper container-fluid">
+
+<!-- <button class='btn btn-info btn-circle' type='button'>UA</button> -->
+    <div id="page-wrapper">
+        <div class="row" id="banner">
+            <div class="col-lg-12">
+                <h3 class="page-header" align="center">Device Certification Status</h3>
+                <%
+                 if(banner.length > 0){
+                %>
+                <div class="alert alert-info">
+                <% banner.forEach(function (content){ %>
+                    <strong><%= content %></strong><br>
+                <%
+                });
+                 %>
+                </div>
+                <%
+                }
+                %>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-xs-24 col-centered">
+                <!--<div class="panel panel-default">-->
+                <!--<div class="panel-heading">-->
+                <!--Jira DataTables-->
+                <!--</div>-->
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="dataTable_wrapper">
+                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                            <thead>
+                            <tr id="headers">
+                            <%
+                               colHeaders.forEach(function (col){
+                            %>
+                                <th><%=col%></th>
+                            <%
+                               });
+                            %>
+                            </tr>
+                            </thead>
+
+                            <tbody id="datatable">
+
+
+                            </tbody>
+                        </table>
+
+                    <div align="center" id="imgSpinner1" style="margin-top: 10%"><h4>Loading...</h4></div>
+                    </div>
+                </div>
+                <!-- /.panel-body -->
+                <!--</div>-->
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+
+        <!-- /.row -->
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<div id="modalDialog">
+
+</div>
+
+<script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+<!-- DataTables JavaScript -->
+<!-- <script src="js/jquery.dataTables.min.js"></script> -->
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="/js/dataTables.bootstrap.min.js"></script>
+
+
+<!-- Export Buttons -->
+
+<script src="https://cdn.datatables.net/buttons/1.1.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+<script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.1.2/js/buttons.html5.min.js"></script>
+<script src="/javascript/generateTable.js"></script>
+<script type="text/javascript" src="/javascript/read.js"></script>
+
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+<script>
+
+$(document).ready(function(){
+
+    addDataToTable.init({
+       dataTables: "#dataTables-example",
+       modal_dialog: "#modalDialog",
+       params: "<%=params%>"
+    });
+});
+</script>
+</body>
+
+</html>
