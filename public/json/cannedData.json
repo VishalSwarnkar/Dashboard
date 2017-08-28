@@ -1,6 +1,6 @@
 [
   {
-    "IPLAYERTVV1-5470": {
+    "sample-5470": {
       "DeviceTitle": "Some thing wrong in live environment",
       "Labels": [
         "TAP"
@@ -11,7 +11,7 @@
     }
   },
   {
-    "IPLAYERTVV1-5468": {
+    "sample-5468": {
       "DeviceTitle": "Text is missing",
       "Labels": [],
       "Description": "Ok lets have a look",
@@ -21,7 +21,7 @@
     }
   },
   {
-    "IPLAYERTVV1-5466": {
+    "sample-5466": {
       "DeviceTitle": "Consider this to be urgent",
       "Labels": [
         "LovelyHorse"
@@ -34,7 +34,7 @@
     }
   },
   {
-    "IPLAYERTVV1-5465": {
+    "sample-5465": {
       "DeviceTitle": "Over heating application",
       "Labels": [],
       "Description": "Get the fan",
@@ -69,7 +69,7 @@
     }
   },
   {
-    "IPLAYERTVV1-5510": {
+    "sample-5510": {
       "DeviceTitle": "Some thing wrong in live environment",
       "Labels": [
         "TAP"

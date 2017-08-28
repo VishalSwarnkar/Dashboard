@@ -16,9 +16,9 @@ Configure tool for your project, below is the sample given
 
 file path: configs->projectConfigs.json
 {
-    "Project": ["IPLAYERTVV1"],
+    "Project": ["sample"],
     "JiraHostUrl": "you jira api url",
-    "JQLQuery": "jql=project in (IPLAYERTVV1) AND issuetype='Bug' AND created >= -12w &maxResults=5",
+    "JQLQuery": "jql=project in (sample) AND issuetype='Bug' AND created >= -12w &maxResults=5",
     "ColHeader": ["Created", "JiraTicket", "Summary", "Priority", "Labels"],
     "bannerData":["Note:", "Nothing"],
     "cacheTime" : "",
